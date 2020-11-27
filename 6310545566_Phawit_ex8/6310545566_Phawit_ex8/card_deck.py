@@ -32,3 +32,14 @@ class CardDeck:
         self.card_draw_number += n
         return card_draw
 
+    def reset_deck(self):
+        SUITS = ['\u2663', '\u2666', '\u2665', '\u2660']
+        RANKS = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack',
+                 'Queen', 'King', 'Ace']
+        deck = []
+        for rank in RANKS:
+            for suit in SUITS:
+                card = rank + ' ' + suit
+                deck += [card]
+        self.card_deck = deck
+        self.card_draw_number = 0

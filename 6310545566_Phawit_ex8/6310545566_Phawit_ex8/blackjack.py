@@ -22,8 +22,8 @@ class Blackjack:
         '''
         self.player_hand = [i for i in self.bj_deck.draw_cards(2)]
         self.computer_hand = [i for i in self.bj_deck.draw_cards(2)]
-        print(self.player_hand)
-        print(self.computer_hand)
+        # print(self.player_hand)
+        # print(self.computer_hand)
         print("Let's play Blackjack!")
         print(self.display_player_hand(2))
         print(self.display_computer_hand(1))
@@ -111,6 +111,15 @@ class Blackjack:
         else:
             return value2
 
-bj = Blackjack()
-print(bj.calculate_value(bj.get_value(['3 ♣', 'Queen ♣'])))
+    def reset(self):
+        deck = CardDeck()
+        deck.shuffle()
+        self.bj_deck = deck
+        self.player_hand = []
+        self.computer_hand = []
+        self.card_number = 0
+        self.player_hand_value = 0 # can have multiple values when hand involves Aces
+        self.computer_hand_value = 0 # can have multiple values when hand involves Aces
+        self.player_hand_status = ... # [stay or dead or can_stay or must_draw_more]
+        self.computer_hand_status = ...
 

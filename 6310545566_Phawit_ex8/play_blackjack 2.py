@@ -38,3 +38,18 @@ while True:
                 continue
             else:
                 break
+
+    # player plays
+    while new_BJ.player_hand_status != 'can_stay':
+        new_BJ.player_status()
+        new_BJ.adjust_player_hand()
+        new_BJ.display_player_hand(len(new_BJ.player_hand))
+
+    if new_BJ.player_hand_status == 'can_stay':
+        new_BJ.player_status()
+        to_stay_or_not = input("More cards? ")
+        if to_stay_or_not == "No" or "no":
+            new_BJ.adjust_player_hand()
+            new_BJ.display_player_hand(len(new_BJ.player_hand))
+        else:
+            new_BJ.player_hand_status = 'stay'

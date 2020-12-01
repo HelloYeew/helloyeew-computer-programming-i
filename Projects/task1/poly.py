@@ -110,6 +110,14 @@ class Polynomial:
         answer = self.for_numpy.coefficients
         return answer
 
+    def __call__(self, v):
+        self.minus(self.other_object)
+        answer = 0
+        for i in range(len(self.__num_list)):
+            answer += self.__num_list[i]*v
+        return answer
+
+
     def __str__(self):
         final_answer = self.print_formula(self.__num_list)
         return final_answer

@@ -9,7 +9,9 @@ class Blackjack:
         self.bj_deck = deck
         self.player_hand = []
         self.computer_hand = []
+        self.player_number = 0
         self.card_number = 0
+        self.player_score = []
         self.player_hand_value = 0 # can have multiple values when hand involves Aces
         self.computer_hand_value = 0 # can have multiple values when hand involves Aces
         self.player_hand_status = ... # [stay or dead or can_stay or must_draw_more]
@@ -20,12 +22,16 @@ class Blackjack:
         self.bj_deck) two cards for player and two cards for computer; then it proceed to update all
         the values and statuses for both hands
         '''
-        self.player_hand = [i for i in self.bj_deck.draw_cards(2)]
+        self.player_number = int(input("How many players to deal? "))
+        for i in range(self.player_number):
+            player_hand = [i for i in self.bj_deck.draw_cards(2)]
+            self.player_hand.append(player_hand)
+            self.player_score.append(0)
         self.computer_hand = [i for i in self.bj_deck.draw_cards(2)]
         # print(self.player_hand)
         # print(self.computer_hand)
-        print("Let's play Blackjack!")
-        print(self.display_player_hand(2))
+        # print("Let's play Blackjack!")
+        print(self.display_player_hand())
         print(self.display_computer_hand(1))
 
     def get_value(self,hand):
@@ -50,13 +56,11 @@ class Blackjack:
         if self.computer_hand_value >= 16:
             self.computer_hand_status = "can_stay"
 
-    def adjust_player_hand(self):
+    def adjust_player_hand(self,player):
         '''This method draws an additional card and reevalute the value and status of the
         player hand
         '''
-        self.player_status()
-        if self.player_hand_status != "can_stay":
-            self.player_hand += self.bj_deck.draw_cards(1)
+        self.player_hand[player] += self.bj_deck.draw_cards(1)
 
     def adjust_computer_hand(self):
         '''This method draws an additional card and reevalute the value and status of the
@@ -66,12 +70,24 @@ class Blackjack:
         if self.computer_hand_status != "can_stay":
             self.computer_hand += self.bj_deck.draw_cards(1)
 
-    def display_player_hand(self,number):
+    def display_player_hand(self):
         '''This method reveals the player hand
         '''
-        str_player_hand = "Your hand: "
-        for i in range(number):
+        # str_player_hand = "Your hand: "
+        # for i in range(number):
+        #     str_player_hand += str(self.player_hand[i]) + " "
+        # return str_player_hand
+        str_player_hand = ""
+        for i in range(self.player_number):
+            str_player_hand += f"Player {i} hand : "
             str_player_hand += str(self.player_hand[i]) + " "
+            str_player_hand += "\n"
+        return str_player_hand
+
+    def display_specific_player_hand(self,number):
+        str_player_hand = ""
+        str_player_hand += f"Player {number} hand : "
+        str_player_hand += str(self.player_hand[number])
         return str_player_hand
 
     def display_computer_hand(self,number):
@@ -110,6 +126,28 @@ class Blackjack:
             return value
         else:
             return value2
+
+    def player_result(self):
+        result = ""
+        computer_score = int(self.calculate_value(self.computer_hand))
+        for i in range(self.player_number):
+            value = self.calculate_value(self.player_hand[i])
+            result += f"Player {i} "
+            if value > computer_score:
+                result += "wins\n"
+                self.player_score[i] += 1
+            elif value < computer_score:
+                result += "losses\n"
+                self.player_score[i] -= 1
+            else:
+                result += "ties\n"
+        return result
+
+    def print_player_score(self):
+        print_player_score = "Current Score :\n"
+        for i in range(len(self.player_score)):
+            print_player_score += f"Player {i}: {self.player_score[i]}\n"
+        return print_player_score
 
     def reset(self):
         deck = CardDeck()

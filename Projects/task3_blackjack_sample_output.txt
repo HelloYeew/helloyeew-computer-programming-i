@@ -1,0 +1,142 @@
+How many players to deal? 3
+Player 0 budget 5000
+Player 1 budget 4000
+Player 2 budget 6000
+
+Player 0 hand: 9♦ 10♥ 
+Player 1 hand: 8♣ King♦ 
+Player 2 hand: King♠ Queen♦ 
+Computer hand: Queen♥ 
+
+Central money = 700
+Player 0 budget 4800
+Player 1 budget 3800
+Player 2 budget 5800
+
+Player 0 hand: 9♦ 10♥ 
+More cards? No
+
+Player 1 hand: 8♣ King♦ 
+More cards? Yes
+Player 1 hand: 8♣ King♦ Jack♥ 
+Central money = 800
+Player 1 budget 3700
+
+Player 2 hand: King♠ Queen♦ 
+More cards? No
+
+Computer hand: Queen♥ 5♥ 
+Central money = 900
+Computer hand final: 3♥ Queen♥ 5♥ 
+
+Central money = 900
+
+Player 0 wins
+Player 1 looses
+Player 2 wins
+
+Player 0 scores 1
+Player 1 scores -1
+Player 2 scores 1
+Computer scores  -1
+
+Player 0 budget 5250.0
+Player 1 budget 3700
+Player 2 budget 6250.0
+
+Next round? Yes
+Player 0 hand: 2♥ Jack♦ 
+Player 1 hand: 9♥ 10♥ 
+Player 2 hand: 7♦ 10♦ 
+Computer hand: 5♠ 
+
+Central money = 700
+Player 0 budget 5050.0
+Player 1 budget 3500
+Player 2 budget 6050.0
+
+Player 0 hand: 2♥ Jack♦ 6♠ 
+Central money = 800
+Player 0 budget 4950.0
+Player 0 hand: 2♥ Jack♦ 6♠ 
+More cards? No
+
+Player 1 hand: 9♥ 10♥ 
+More cards? No
+
+Player 2 hand: 7♦ 10♦ 
+More cards? Yes
+Player 2 hand: 7♦ 10♦ 7♣ 
+Central money = 900
+Player 2 budget 5950.0
+
+Computer hand: 5♠ King♣ 
+Central money = 1000
+Computer hand final: 7♠ 5♠ King♣ 
+
+Central money = 1000
+
+Player 0 wins
+Player 1 wins
+Player 2 ties
+
+Player 0 scores 2
+Player 1 scores 0
+Player 2 scores 1
+Computer scores  -3
+
+Player 0 budget 5450.0
+Player 1 budget 4000.0
+Player 2 budget 5950.0
+
+Next round? Yes
+Player 0 hand: 5♦ 2♦ 
+Player 1 hand: 3♦ 7♥ 
+Player 2 hand: 6♠ 5♥ 
+Computer hand: Queen♥ 
+
+Central money = 700
+Player 0 budget 5250.0
+Player 1 budget 3800.0
+Player 2 budget 5750.0
+
+Player 0 hand: 5♦ 2♦ 10♥ 
+Central money = 800
+Player 0 budget 5150.0
+Player 0 hand: 5♦ 2♦ 10♥ 
+More cards? Yes
+Player 0 hand: 5♦ 2♦ 10♥ 8♣ 
+Central money = 900
+Player 0 budget 5050.0
+
+Player 1 hand: 3♦ 7♥ Jack♦ 
+Central money = 1000
+Player 1 budget 3700.0
+Player 1 hand: 3♦ 7♥ Jack♦ 
+More cards? No
+
+Player 2 hand: 6♠ 5♥ Ace♥ 
+Central money = 1100
+Player 2 budget 5650.0
+Player 2 hand: 6♠ 5♥ Ace♥ Queen♦ 
+Central money = 1200
+Player 2 budget 5550.0
+
+Computer hand final: 9♠ Queen♥ 
+
+Central money = 1200
+
+Player 0 looses
+Player 1 wins
+Player 2 looses
+
+Player 0 scores 1
+Player 1 scores 1
+Player 2 scores 0
+Computer scores  -2
+
+Player 0 budget 5050.0
+Player 1 budget 4900.0
+Player 2 budget 5550.0
+
+Next round? No

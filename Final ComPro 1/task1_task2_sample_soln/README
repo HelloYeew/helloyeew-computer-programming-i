@@ -1,0 +1,8 @@
+To run poly:
+cd poly
+python3 run_poly.py
+
+To run blackjack:
+cd blackjack
+python3 run_blackjack.py
+
